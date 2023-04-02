@@ -147,9 +147,16 @@
   <ItemGroup>
     <ClCompile Include="Cosmo-core\src\graphics\window.cpp" />
     <ClCompile Include="Cosmo-core\main.cpp" />
+    <ClCompile Include="Cosmo-core\src\maths\vec2.cpp" />
+    <ClCompile Include="Cosmo-core\src\maths\vec3.cpp" />
+    <ClCompile Include="Cosmo-core\src\maths\vec4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cosmo-core\src\graphics\window.h" />
+    <ClInclude Include="Cosmo-core\src\maths\maths.h" />
+    <ClInclude Include="Cosmo-core\src\maths\vec2.h" />
+    <ClInclude Include="Cosmo-core\src\maths\vec3.h" />
+    <ClInclude Include="Cosmo-core\src\maths\vec4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
