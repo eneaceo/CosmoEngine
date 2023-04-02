@@ -19,18 +19,24 @@ int main()
 
 		window.clear();
 
-# if 0 
+		double x, y;
+		window.get_mouse_position(x, y);
+		if (window.is_mouse_button_pressed(GLFW_MOUSE_BUTTON_LEFT))
+		{
+			std::cout << x << ", " << y << std::endl;
+		}
 
+# if 1
 		glBegin(GL_QUADS);
 		glVertex2f( -0.5f, -0.5f);
 		glVertex2f( -0.5f,  0.5f);
 		glVertex2f(  0.5f,  0.5f);
 		glVertex2f(  0.5f, -0.5f);
 		glEnd();
-
-# endif
-		
+# else
 		glDrawArrays(GL_ARRAY_BUFFER, 0, 6);
+# endif 
+		
 		window.update();
 	}
 
