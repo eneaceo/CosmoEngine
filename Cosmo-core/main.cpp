@@ -17,6 +17,9 @@ int main()
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 
+	mat4 position = mat4::translation(vec3(2, 3, 4));
+	position *= mat4::identity();
+
 	while (!window.closed())
 	{
 
