@@ -33,6 +33,9 @@
     <ClCompile Include="Cosmo-core\src\maths\mat4.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Cosmo-core\src\graphics\shader.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cosmo-core\src\graphics\window.h">
@@ -56,5 +59,15 @@
     <ClInclude Include="Cosmo-core\src\maths\math_functions.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Cosmo-core\src\utils\file_utils.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Cosmo-core\src\graphics\shader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cosmo-core\src\shaders\basic.vert" />
+    <None Include="Cosmo-core\src\shaders\basic.frag" />
   </ItemGroup>
 </Project>

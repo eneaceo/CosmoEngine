@@ -4,8 +4,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-namespace cosmo { namespace graphics
-{
+namespace cosmo { namespace graphics {
 
 #define MAX_KEYS			1024
 #define MAX_MOUSE_BUTTONS	32
