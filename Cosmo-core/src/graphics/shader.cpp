@@ -80,4 +80,39 @@ namespace cosmo { namespace graphics {
 	}
 
 
+	void Shader::set_uniform_1f(const GLchar* name, float value)
+	{
+		glUniform1f(get_uniform_location(name), value);
+	}
+
+	void Shader::set_uniform_1i(const GLchar* name, int value)
+	{
+		glUniform1f(get_uniform_location(name), value);
+	}
+
+	void Shader::set_uniform_2f(const GLchar* name, const maths::vec2& vector)
+	{
+		glUniform2f(get_uniform_location(name), vector.x, vector.y);
+	}
+
+	void Shader::set_uniform_3f(const GLchar* name, const maths::vec3& vector)
+	{
+		glUniform3f(get_uniform_location(name), vector.x, vector.y, vector.z);
+	}
+
+	void Shader::set_uniform_4f(const GLchar* name, const maths::vec4& vector)
+	{
+		glUniform4f(get_uniform_location(name), vector.x, vector.y, vector.z, vector.w);
+	}
+
+	void Shader::set_uniform_mat4(const GLchar* name, const maths::mat4& matrix)
+	{
+		glUniformMatrix4fv(get_uniform_location(name), 1, GL_FALSE, matrix.elements);
+	}
+
+	GLuint Shader::get_uniform_location(const GLchar* name)
+	{
+		return glGetUniformLocation(m_shader_id, name);
+	}
+
 } }

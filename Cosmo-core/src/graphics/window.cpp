@@ -91,6 +91,10 @@ namespace cosmo { namespace graphics {
 	// Update window, called every frame
 	void Window::update()
 	{
+		GLenum error = glGetError();
+		if (error != GL_NO_ERROR)
+			std::cout << "OpenGL Error: " << error << std::endl;
+
 		glfwPollEvents();
 		glfwGetFramebufferSize(m_window, &m_width, &m_height);
 		glfwSwapBuffers(m_window);
