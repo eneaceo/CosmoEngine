@@ -10,11 +10,11 @@ namespace cosmo { namespace graphics {
 	{
 
 	private:
-		std::deque<const Renderable2D&> m_render_queue;
+		std::deque<const Renderable2D*> m_render_queue;
 
 	public:
 
-		virtual void submit(const Renderable2D& renderable) override;
+		virtual void submit(const Renderable2D* renderable) override;
 		virtual void flush() override;
 	};
 
