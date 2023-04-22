@@ -16,6 +16,11 @@ namespace cosmo { namespace graphics {
 
 	}
 
+	Buffer::~Buffer()
+	{
+		glDeleteBuffers(1, &m_buffer_id);
+	}
+
 	void Buffer::bind() const
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, m_buffer_id);

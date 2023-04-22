@@ -1,6 +1,7 @@
 #pragma once
 
 #include "renderer2D.h"
+#include "static_sprite.h"
 #include <deque>
 
 namespace cosmo { namespace graphics {
@@ -10,7 +11,7 @@ namespace cosmo { namespace graphics {
 	{
 
 	private:
-		std::deque<const Renderable2D*> m_render_queue;
+		std::deque<const StaticSprite*> m_render_queue;
 
 	public:
 

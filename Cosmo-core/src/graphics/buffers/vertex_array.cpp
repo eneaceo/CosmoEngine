@@ -14,6 +14,8 @@ namespace cosmo { namespace graphics {
 		{
 			delete m_buffers[i];
 		}
+
+		glDeleteVertexArrays(1, &m_array_id);
 	}
 
 	void VertexArray::add_buffer(Buffer* buffer, GLuint index)

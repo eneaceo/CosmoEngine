@@ -145,11 +145,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cosmo-core\src\graphics\batchrenderer2D.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\buffers\buffer.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\buffers\index_buffer.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\buffers\vertex_array.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\simple2Drenderer.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\shader.cpp" />
+    <ClCompile Include="Cosmo-core\src\graphics\sprite.cpp" />
+    <ClCompile Include="Cosmo-core\src\graphics\static_sprite.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\window.cpp" />
     <ClCompile Include="Cosmo-core\main.cpp" />
     <ClCompile Include="Cosmo-core\src\maths\mat4.cpp" />
@@ -158,6 +161,7 @@
     <ClCompile Include="Cosmo-core\src\maths\vec4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cosmo-core\src\graphics\batchrenderer2D.h" />
     <ClInclude Include="Cosmo-core\src\graphics\buffers\buffer.h" />
     <ClInclude Include="Cosmo-core\src\graphics\buffers\index_buffer.h" />
     <ClInclude Include="Cosmo-core\src\graphics\buffers\vertex_array.h" />
@@ -165,6 +169,8 @@
     <ClInclude Include="Cosmo-core\src\graphics\renderer2D.h" />
     <ClInclude Include="Cosmo-core\src\graphics\shader.h" />
     <ClInclude Include="Cosmo-core\src\graphics\simple2Drenderer.h" />
+    <ClInclude Include="Cosmo-core\src\graphics\sprite.h" />
+    <ClInclude Include="Cosmo-core\src\graphics\static_sprite.h" />
     <ClInclude Include="Cosmo-core\src\graphics\window.h" />
     <ClInclude Include="Cosmo-core\src\maths\mat4.h" />
     <ClInclude Include="Cosmo-core\src\maths\maths.h" />
