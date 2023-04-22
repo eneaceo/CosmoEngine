@@ -15,6 +15,7 @@
 
 #include <vector>
 #include <time.h>
+#include "src/utils/timer.h"
 
 #define RENDERER 1
 
@@ -45,7 +46,7 @@ int main()
 		{
 			sprites.push_back(new 
 #if RENDERER
-				Sprite(x, y, 0.04f, 0.04f, maths::vec4(rand() % 1000 / 1000.0f, 0, 1, 1)));
+				Sprite(x, y, 0.04f, 0.04f, maths::vec4(rand() % 1000 / 1000.0f, rand() % 1000 / 1000.0f, rand() % 1000 / 1000.0f, 1)));
 #else
 				StaticSprite(x, y, 0.04f, 0.04f, maths::vec4(rand() % 1000 / 1000.0f, 0, 1, 1), shader));
 #endif
@@ -68,11 +69,18 @@ int main()
 
 	shader.set_uniform_4f("colour", vec4(0.2f, 0.3f, 0.8f, 1.0f));
 
-	float count = 0.0f;
-	bool dir = true;
+	Timer time;
+	float timer = 0;
+	unsigned int frames = 0;
 
 	while (!window.closed())
 	{
+
+		mat4 mat = mat4::translation(vec3(5, 5, 5));
+		mat = mat * mat4::rotation(time.elapsed() * 10.0f, vec3(1, 1, 1));
+		mat = mat * mat4::translation(vec3(-5, -5, -5));
+		shader.set_uniform_mat4("ml_matrix", mat);
+
 		window.clear();
 
 		double x, y;
@@ -93,8 +101,15 @@ int main()
 		renderer.end();
 #endif
 		renderer.flush();
-		printf("Sprites: %d\n", sprites.size());
+
 		window.update();
+		frames++;
+		if (time.elapsed() - timer > 1.0f)
+		{
+			timer += 1.0f;
+			printf("%d FPS\n", frames);
+			frames = 0;
+		}
 
 	}
 

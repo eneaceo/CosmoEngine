@@ -65,6 +65,8 @@ namespace cosmo { namespace graphics {
 			glfwSetMouseButtonCallback(m_window, mouse_button_callback);
 			glfwSetCursorPosCallback(m_window, cursor_position_callback);
 
+			glfwSwapInterval(0);
+
 			if (glewInit() != GLEW_OK)
 			{
 				std::cout << "ERROR: Failed GLEW initialization" << std::endl;

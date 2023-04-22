@@ -1,6 +1,7 @@
 #pragma once
 
 #include "renderer2D.h"
+#include <cstddef>
 
 namespace cosmo { namespace graphics {
 

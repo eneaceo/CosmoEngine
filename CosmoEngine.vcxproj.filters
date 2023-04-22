@@ -113,6 +113,9 @@
     <ClInclude Include="Cosmo-core\src\graphics\static_sprite.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Cosmo-core\src\utils\timer.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Cosmo-core\src\shaders\basic.vert" />

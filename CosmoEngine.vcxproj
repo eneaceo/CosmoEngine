@@ -134,6 +134,11 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -179,6 +184,7 @@
     <ClInclude Include="Cosmo-core\src\maths\vec3.h" />
     <ClInclude Include="Cosmo-core\src\maths\vec4.h" />
     <ClInclude Include="Cosmo-core\src\utils\file_utils.h" />
+    <ClInclude Include="Cosmo-core\src\utils\timer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Cosmo-core\src\shaders\basic.frag" />

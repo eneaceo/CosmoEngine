@@ -19,8 +19,8 @@ namespace cosmo { namespace graphics {
 		GLuint vertex = glCreateShader(GL_VERTEX_SHADER);
 		GLuint fragment = glCreateShader(GL_FRAGMENT_SHADER);
 
-		std::string vertsource_string = file_utils::read_file(m_vertpath);
-		std::string fragsource_string = file_utils::read_file(m_fragpath);
+		std::string vertsource_string = FileUtils::read_file(m_vertpath);
+		std::string fragsource_string = FileUtils::read_file(m_fragpath);
 		const char* vertsource = vertsource_string.c_str();
 		const char* fragsource = fragsource_string.c_str();
 

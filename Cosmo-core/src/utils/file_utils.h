@@ -7,7 +7,7 @@
 
 namespace cosmo {
 
-	class file_utils {
+	class FileUtils {
 	
 	public:
 
