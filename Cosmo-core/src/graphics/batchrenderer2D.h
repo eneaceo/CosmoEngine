@@ -14,7 +14,7 @@ namespace cosmo { namespace graphics {
 #define SHADER_VERTEX_INDEX		0 
 #define SHADER_COLOR_INDEX		1 
 
-		class BatchRenderer2D : public Rendered2D
+		class BatchRenderer2D : public Renderer2D
 		{
 
 		private:
@@ -32,8 +32,8 @@ namespace cosmo { namespace graphics {
 			BatchRenderer2D();
 			~BatchRenderer2D();
 
-			void begin();
-			void end();
+			void begin() override;
+			void end() override;
 
 			virtual void submit(const Renderable2D* renderable) override;
 			virtual void flush() override;

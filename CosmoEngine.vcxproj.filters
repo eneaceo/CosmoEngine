@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cosmo-core\main.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="Cosmo-core\src\graphics\window.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -55,6 +52,15 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Cosmo-core\src\graphics\static_sprite.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Cosmo-core\src\graphics\layers\layer.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Cosmo-core\src\graphics\layers\tile_layer.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,9 +122,16 @@
     <ClInclude Include="Cosmo-core\src\utils\timer.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Cosmo-core\src\graphics\layers\layer.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Cosmo-core\src\graphics\layers\tile_layer.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Cosmo-core\src\shaders\basic.vert" />
     <None Include="Cosmo-core\src\shaders\basic.frag" />
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

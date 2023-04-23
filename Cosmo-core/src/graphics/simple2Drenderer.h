@@ -7,7 +7,7 @@
 namespace cosmo { namespace graphics {
 
 
-	class Simple2DRenderer : public Rendered2D
+	class Simple2DRenderer : public Renderer2D
 	{
 
 	private:

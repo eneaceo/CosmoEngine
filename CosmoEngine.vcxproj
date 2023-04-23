@@ -115,6 +115,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,6 +140,7 @@
       <OmitFramePointers>false</OmitFramePointers>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -154,22 +156,26 @@
     <ClCompile Include="Cosmo-core\src\graphics\buffers\buffer.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\buffers\index_buffer.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\buffers\vertex_array.cpp" />
+    <ClCompile Include="Cosmo-core\src\graphics\layers\layer.cpp" />
+    <ClCompile Include="Cosmo-core\src\graphics\layers\tile_layer.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\simple2Drenderer.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\shader.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\sprite.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\static_sprite.cpp" />
     <ClCompile Include="Cosmo-core\src\graphics\window.cpp" />
-    <ClCompile Include="Cosmo-core\main.cpp" />
     <ClCompile Include="Cosmo-core\src\maths\mat4.cpp" />
     <ClCompile Include="Cosmo-core\src\maths\vec2.cpp" />
     <ClCompile Include="Cosmo-core\src\maths\vec3.cpp" />
     <ClCompile Include="Cosmo-core\src\maths\vec4.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cosmo-core\src\graphics\batchrenderer2D.h" />
     <ClInclude Include="Cosmo-core\src\graphics\buffers\buffer.h" />
     <ClInclude Include="Cosmo-core\src\graphics\buffers\index_buffer.h" />
     <ClInclude Include="Cosmo-core\src\graphics\buffers\vertex_array.h" />
+    <ClInclude Include="Cosmo-core\src\graphics\layers\layer.h" />
+    <ClInclude Include="Cosmo-core\src\graphics\layers\tile_layer.h" />
     <ClInclude Include="Cosmo-core\src\graphics\renderable2D.h" />
     <ClInclude Include="Cosmo-core\src\graphics\renderer2D.h" />
     <ClInclude Include="Cosmo-core\src\graphics\shader.h" />
@@ -187,6 +193,7 @@
     <ClInclude Include="Cosmo-core\src\utils\timer.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="Cosmo-core\src\shaders\basic.frag" />
     <None Include="Cosmo-core\src\shaders\basic.vert" />
   </ItemGroup>
